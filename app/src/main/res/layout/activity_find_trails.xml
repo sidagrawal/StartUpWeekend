@@ -10,26 +10,16 @@
     tools:context="com.brydenfogelman.startupweekend.Find_trails">
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Find Trails"
-        android:id="@+id/textView2"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="54dp" />
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Near Me"
         android:id="@+id/near_me"
         android:layout_gravity="center_vertical"
+        android:layout_marginTop="52dp"
         android:layout_below="@+id/textView2"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_alignStart="@+id/textView2"
-        android:layout_marginTop="54dp" />
+        android:layout_alignRight="@+id/textView4"
+        android:layout_alignEnd="@+id/textView4" />
 
     <Spinner
         android:id="@+id/spinner"
@@ -37,10 +27,10 @@
         android:layout_height="wrap_content"
         android:drawSelectorOnTop="true"
         android:entries="@array/other_locations"
-        android:layout_marginTop="80dp"
         android:layout_below="@+id/near_me"
-        android:layout_alignRight="@+id/textView2"
-        android:layout_alignEnd="@+id/textView2" />
+        android:layout_toRightOf="@+id/textView6"
+        android:layout_alignRight="@+id/near_me"
+        android:layout_alignEnd="@+id/near_me" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -48,8 +38,105 @@
         android:layout_height="wrap_content"
         android:text="Go!"
         android:id="@+id/go"
-        android:layout_alignTop="@+id/spinner"
-        android:layout_toRightOf="@+id/spinner"
-        android:layout_toEndOf="@+id/spinner" />
+        android:layout_below="@+id/near_me"
+        android:layout_toRightOf="@+id/near_me"
+        android:layout_toEndOf="@+id/near_me" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Optimize your adventure!"
+        android:id="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Driving Time"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/difficulty"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/driveTimeBar"
+        android:max="0"
+        android:progress="5"
+        android:indeterminate="false"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Estimated Length (hours)"
+        android:id="@+id/textView4"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/driveTimeBar"
+        android:layout_alignParentLeft="true" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/trailTimeBar"
+        android:max="0"
+        android:progress="5"
+        android:indeterminate="false"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/driveTimeBar"
+        android:layout_alignEnd="@+id/driveTimeBar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Driving Time"
+        android:id="@+id/textView5"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/trailTimeBar"
+        android:layout_alignParentLeft="true" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar3"
+        android:max="0"
+        android:progress="5"
+        android:indeterminate="false"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/trailTimeBar"
+        android:layout_alignEnd="@+id/trailTimeBar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Difficulty"
+        android:id="@+id/textView6"
+        android:layout_below="@+id/spinner"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="54dp" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/difficulty"
+        android:layout_below="@+id/textView6"
+        android:spinnerMode="dropdown" />
 
 </RelativeLayout>
