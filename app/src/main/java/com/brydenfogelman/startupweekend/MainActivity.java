@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
+import android.view.View;
 import android.view.MenuItem;
 
 public class MainActivity extends ActionBarActivity {
@@ -12,7 +13,7 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Intent intent = new Intent(this, Login.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 
@@ -37,4 +38,15 @@ public class MainActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void onClickLogin(View view) {
+        Intent intent = new Intent(this, Login.class);
+        startActivity(intent);
+    }
+
+    public void onClickSignup(View view) {
+        Intent intent = new Intent(this, SignUp.class);
+        startActivity(intent);
+    }
+
 }
