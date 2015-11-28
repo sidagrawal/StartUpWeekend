@@ -76,7 +76,8 @@
             android:id="@+id/sign_up"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="Sign Up!"/>
+            android:text="Sign Up!"
+            android:onClick="OnClickSignup" />
     </LinearLayout>
 
 
