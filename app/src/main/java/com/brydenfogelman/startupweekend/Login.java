@@ -56,9 +56,9 @@ public class Login extends ActionBarActivity {
         @Override
         protected String doInBackground(String... params) {
             try {
-                String email = params[0];
-                String password = params[1];
-                String link = "http://159.203.66.71/Startup Weekend/signin.php?email=" + email + "&password=" + password;
+                String email = params[0].trim();
+                String password = params[1].trim();
+                String link = "http://159.203.66.71/Startup%20Weekend/signin.php?email=" + email + "&password=" + password;
                 Log.d("link", link);
 
                 URL url = new URL(link);

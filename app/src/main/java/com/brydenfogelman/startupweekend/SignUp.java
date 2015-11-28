@@ -30,10 +30,10 @@ public class SignUp extends ActionBarActivity {
         String firstname = ((EditText) findViewById(R.id.first_name)).getText().toString();
         String lastname = ((EditText) findViewById(R.id.last_name)).getText().toString();
         String screenname = ((EditText) findViewById(R.id.screen_name)).getText().toString();
-        String email = ((EditText) findViewById(R.id.email)).getText().toString();
+        String email = ((EditText) findViewById(R.id.email_address)).getText().toString();
         String password = ((EditText) findViewById(R.id.password)).getText().toString();
         String age = ((EditText) findViewById(R.id.age)).getText().toString();
-        String gender = ((Spinner) findViewById(R.id.gender)).toString();
+        String gender = ((Spinner) findViewById(R.id.gender)).getSelectedItem().toString();
 
 
         String create_account_success = new String();
@@ -55,10 +55,7 @@ public class SignUp extends ActionBarActivity {
 
         // Returns to the SignUp
         // TODO: let user know that they fucked up, work on that implementation
-        if (!create_account_success.contains("fail")) {
-            Intent intent = new Intent(this, SignUp.class);
-            startActivity(intent);
-        }
+
     }
 
     class phpLogin extends AsyncTask<String, Void, String> {
@@ -71,17 +68,22 @@ public class SignUp extends ActionBarActivity {
         @Override
         protected String doInBackground(String... params) {
             try {
-                String firstname = params[0];
-                String lastname = params[1];
-                String screenname = params[2];
-                String email = params[3];
-                String password = params[4];
-                String age = params[5];
-                String gender = params[6];
+                String firstname = params[0].trim();
+                String lastname = params[1].trim();
+                String screenname = params[2].trim();
+                String email = params[3].trim();
+                String password = params[4].trim();
+                String age = params[5].trim();
+                String gender = params[6].trim();
+                if(gender.equals("Male")){
+                    gender = "0";
+                }else if(gender.equals("Female")){
+                    gender = "1";
+                }
 
-                String link = "http://159.203.66.71/Startup Weekend/create_user.php?username=" +
-                        screenname + "&email=" + email + "&password=" + password + "&firstname=" +
-                        firstname + "&lastname=" + lastname + "&gender=" + gender + "&age" + age;
+                String link = "http://159.203.66.71/Startup%20Weekend/create_user.php?username=" +
+                        screenname + "&password="+ password + "&email=" + email  + "&first_name=" +
+                        firstname + "&last_name=" + lastname + "&gender=" + gender + "&age=" + age;
                 Log.d("link", link);
 
                 URL url = new URL(link);
