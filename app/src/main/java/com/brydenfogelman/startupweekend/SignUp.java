@@ -33,7 +33,7 @@ public class SignUp extends ActionBarActivity {
         String email = ((EditText) findViewById(R.id.email)).getText().toString();
         String password = ((EditText) findViewById(R.id.password)).getText().toString();
         String age = ((EditText) findViewById(R.id.age)).getText().toString();
-        String gender = ((EditText) findViewById(R.id.gender)).getText().toString();
+        String gender = ((Spinner) findViewById(R.id.gender)).toString();
 
 
         String create_account_success = new String();

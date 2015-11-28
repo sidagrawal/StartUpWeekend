@@ -17,4 +17,10 @@
         <item>Ridge Meadows</item>
         <item>Pemberton</item>
     </string-array>
+
+    <string-array name="gender_options">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Choose to not Specify</item>
+    </string-array>
 </resources>

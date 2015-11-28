@@ -57,15 +57,10 @@
                 />
 
 
-        <EditText
-            android:id="@+id/gender"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:hint="Gender" />
-
         <Spinner
-            android:id="@+id/spinner1"
+            android:entries="@array/other_locations"
+            android:drawSelectorOnTop="true"
+            android:id="@+id/gender"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:spinnerMode="dropdown" />
