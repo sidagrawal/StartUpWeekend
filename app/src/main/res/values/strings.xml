@@ -4,4 +4,17 @@
     <string name="title_activity_login">Login</string>
     <string name="title_activity_find_trails">Find_trails</string>
     <string name="title_activity_sign_up">SignUp</string>
+
+    <string-array name="other_locations">
+        <item>Vancouver City</item>
+        <item>Whistler</item>
+        <item>Tri Cities</item>
+        <item>The North Shore</item>
+        <item>Howe Sound</item>
+        <item>Surrey and Langley</item>
+        <item>Tsawwassen and Delta</item>
+        <item>Fraser Valley East</item>
+        <item>Ridge Meadows</item>
+        <item>Pemberton</item>
+    </string-array>
 </resources>
