@@ -20,7 +20,7 @@ public class Login extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login);
+        setContentView(R.layout.activity_login);
     }
 
     public void login(View view) {
@@ -32,7 +32,7 @@ public class Login extends ActionBarActivity {
         try {
 
             login_success = new phpLogin(this).execute(username, password).get();
-            Log.d("login", login_success);
+            Log.d("activity_login", login_success);
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
