@@ -64,14 +64,16 @@
             android:inputType="number"
             android:hint="Gender" />
 
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown" />
+
     </LinearLayout>
 
 
-    <Spinner
-        android:id="@+id/spinner1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:spinnerMode="dropdown" />
+
 
     <LinearLayout
         android:layout_width="wrap_content"
