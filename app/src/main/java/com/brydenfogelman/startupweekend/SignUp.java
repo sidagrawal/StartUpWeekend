@@ -79,8 +79,9 @@ public class SignUp extends ActionBarActivity {
                 String age = params[5];
                 String gender = params[6];
 
-                String link = "";
-                String link = "http://159.203.66.71/Startup Weekend/create_user.php?username=" +screenname + "&email=" + email + "&password=" + password;
+                String link = "http://159.203.66.71/Startup Weekend/create_user.php?username=" +
+                        screenname + "&email=" + email + "&password=" + password + "&firstname=" +
+                        firstname + "&lastname=" + lastname + "&gender=" + gender + "&age" + age;
                 Log.d("link", link);
 
                 URL url = new URL(link);
