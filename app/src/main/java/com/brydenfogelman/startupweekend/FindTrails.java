@@ -102,6 +102,19 @@ public class FindTrails extends ActionBarActivity {
         bundle.putString("difficulty", difficulty.getSelectedItem().toString());
         bundle.putString("hike_time", hike_time_text.getText().toString());
         bundle.putString("drive_time", driving_time_text.getText().toString());
+        bundle.putString("get_all", "false");
+        intent.putExtra("bundle", bundle);
+        startActivity(intent);
+    }
+
+    public void getAll(View view){
+        Intent intent = new Intent(this, TrailList.class);
+        Bundle bundle = new Bundle();
+        bundle.putString("region", other_locations.getSelectedItem().toString());
+        bundle.putString("difficulty", difficulty.getSelectedItem().toString());
+        bundle.putString("hike_time", hike_time_text.getText().toString());
+        bundle.putString("drive_time", driving_time_text.getText().toString());
+        bundle.putString("get_all", "true");
         intent.putExtra("bundle", bundle);
         startActivity(intent);
     }

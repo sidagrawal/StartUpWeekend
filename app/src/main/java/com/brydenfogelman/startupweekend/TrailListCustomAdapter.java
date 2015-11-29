@@ -81,7 +81,7 @@ public class TrailListCustomAdapter extends RecyclerView.Adapter<TrailListCustom
         holder.trail_name_and_region_view.setText(name_region.get(position));
         holder.difficulty_view.setText(diffculty.get(position));
         holder.hike_time_view.setText(hike_time.get(position));
-        holder.driving_time_view.setText("0");
+        holder.driving_time_view.setText(driving_time.get(position));
     }
 
     // Return the size of your dataset (invoked by the layout manager)

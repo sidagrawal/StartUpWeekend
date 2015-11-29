@@ -23,6 +23,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.concurrent.ExecutionException;
 
 public class TrailList extends Activity {
@@ -30,6 +31,7 @@ public class TrailList extends Activity {
     String difficulty;
     String hike_time;
     String drive_time;
+    String get_all;
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
@@ -45,9 +47,10 @@ public class TrailList extends Activity {
         difficulty = getIntent().getBundleExtra("bundle").getString("difficulty");
         hike_time = getIntent().getBundleExtra("bundle").getString("hike_time");
         drive_time = getIntent().getBundleExtra("bundle").getString("drive_time");
+        get_all = getIntent().getBundleExtra("bundle").getString("get_all");
         String trails = "";
         try {
-            trails = new phpGetTrails(this).execute(region, difficulty, hike_time, drive_time).get();
+            trails = new phpGetTrails(this).execute(region, difficulty, hike_time, drive_time, get_all).get();
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
@@ -75,6 +78,9 @@ public class TrailList extends Activity {
                 listOfHikeTime.add(hikeTime);
                 String name = trailObject.getString("name");
                 listOfName.add(name + ", " + region);
+                Random rand = new Random();
+                String driving_time = Integer.toString(rand.nextInt(4) + 1);
+                listOfDriveTime.add(driving_time);
             }
 
         } catch (JSONException e) {
@@ -136,10 +142,18 @@ class phpGetTrails extends AsyncTask<String, Void, String> {
             String difficulty = params[1].trim();
             String hike_time = params[2].trim();
             String drive_time = params[3].trim();
-
-            String link = "http://159.203.66.71/Startup%20Weekend/get_trails.php?region=" +
-                    region + "&difficulty="+ difficulty + "&hike_time=" + hike_time  + "&drive_time=" +
-                    drive_time;
+            String get_all = params[4].trim();
+            String link;
+            if(get_all.contains("false")){
+                link = "http://159.203.66.71/Startup%20Weekend/get_trails.php?region=" +
+                        region + "&difficulty="+ difficulty + "&hike_time=" + hike_time  + "&drive_time=" +
+                        drive_time;
+            }
+            else{
+                link = "http://159.203.66.71/Startup%20Weekend/get_all_trails.php?region=" +
+                        region + "&difficulty="+ difficulty + "&hike_time=" + hike_time  + "&drive_time=" +
+                        drive_time;
+            }
             Log.d("link", link);
 
             URL url = new URL(link);
