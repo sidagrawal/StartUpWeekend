@@ -68,9 +68,6 @@
 
     </LinearLayout>
 
-
-
-
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -85,7 +82,5 @@
             android:onClick="newUser"
             style="?android:attr/borderlessButtonStyle"/>
     </LinearLayout>
-
-
 
 </LinearLayout>

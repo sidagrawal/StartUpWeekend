@@ -6,12 +6,16 @@ import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
+import android.view.Menu;
 import android.view.View;
 import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
+import android.view.Menu;
+import android.view.View;
+import android.view.MenuItem;
 
 public class Find_trails extends Activity {
 
@@ -48,6 +52,7 @@ public class Find_trails extends Activity {
             public void onStopTrackingTouch(SeekBar seekBar) {
             }
         });
+
 
         hike_time.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             int progressChanged = 0;
