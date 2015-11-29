@@ -52,9 +52,6 @@
         <activity
             android:name=".TrailDescription"
             android:label="@string/title_activity_trail_description" />
-        <activity
-            android:name=".ReferFriend"
-            android:label="@string/title_activity_refer_friend"></activity>
     </application>
 
 </manifest>
