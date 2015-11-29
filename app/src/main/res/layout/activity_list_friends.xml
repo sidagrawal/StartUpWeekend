@@ -8,17 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="List of Friends"
-        android:id="@+id/textView12"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp" />
-
+    
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -31,7 +21,10 @@
             android:textAllCaps="false"
             android:id="@+id/button4"
             android:layout_marginTop="10dp"
-            style="@style/ColoredButton" />
+            style="@style/ColoredButton"
+            android:layout_centerInParent="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"/>
 
     </RelativeLayout>
 
@@ -39,7 +32,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@android:id/list"
-        android:layout_below="@+id/textView12"
-        android:layout_centerHorizontal="true"/>
+        style="@style/topBelowMargin"/>
 
 </LinearLayout>
