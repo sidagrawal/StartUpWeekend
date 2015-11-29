@@ -33,10 +33,13 @@
             android:label="@string/title_activity_result_list" />
         <activity
             android:name=".Trail_List"
-            android:label="@string/title_activity_trail__list"/>
+            android:label="@string/title_activity_trail__list" />
         <activity
             android:name=".friends"
-            android:label="@string/title_activity_friends"/>
+            android:label="@string/title_activity_friends" />
+        <activity
+            android:name=".ListFriends"
+            android:label="@string/title_activity_list_friends"></activity>
     </application>
 
 </manifest>

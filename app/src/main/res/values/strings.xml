@@ -28,6 +28,7 @@
 
     <color name="green">#27ae60</color>
     <color name="white">#ecf0f1</color>
+    <color name="blue">#2980b9</color>
     <string name="title_activity_result_list">ResultList</string>
 
     <string-array name="difficulties">
@@ -37,4 +38,5 @@
     </string-array>
     <string name="title_activity_trail__list">Trail_List</string>
     <string name="title_activity_friends">friends</string>
+    <string name="title_activity_list_friends">ListFriends</string>
 </resources>
