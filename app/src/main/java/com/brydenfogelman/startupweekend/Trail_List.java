@@ -1,10 +1,12 @@
 package com.brydenfogelman.startupweekend;
 
+import android.app.ListActivity;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
+import android.widget.ArrayAdapter;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -17,7 +19,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 
-public class Trail_List extends ActionBarActivity {
+public class Trail_List extends ListActivity {
     String region;
     String difficulty;
     String hike_time;
@@ -66,8 +68,10 @@ public class Trail_List extends ActionBarActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+        int [] prgmImages={R.drawable.blank_profile_photo,R.drawable.blank_profile_photo,R.drawable.blank_profile_photo,R.drawable.blank_profile_photo};
+        //this.setListAdapter(new ArrayAdapter<String>(this, R.layout.mylist, R.id.Itemname, listOfRegion));
+        this.setListAdapter( new CustomAdapter(this, listOfRegion, prgmImages));
 
-        Log.d("hello", listOfRegion.toString());
 
 
     }
