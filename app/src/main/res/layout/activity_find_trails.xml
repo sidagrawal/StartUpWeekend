@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,41 +7,10 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.brydenfogelman.startupweekend.Find_trails">
+    android:orientation="vertical"
+    tools:context="com.brydenfogelman.startupweekend.Find_trails"
+    android:background="@color/blue">
 
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Near Me"
-        android:id="@+id/near_me"
-        android:layout_gravity="center_vertical"
-        android:layout_marginTop="52dp"
-        android:layout_below="@+id/header"
-        android:layout_alignRight="@+id/trailTime"
-        android:layout_alignEnd="@+id/trailTime" />
-
-    <Spinner
-        android:id="@+id/other_locations"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:drawSelectorOnTop="true"
-        android:entries="@array/other_locations"
-        android:layout_below="@+id/near_me"
-        android:layout_toRightOf="@+id/textView6"
-        android:layout_alignRight="@+id/near_me"
-        android:layout_alignEnd="@+id/near_me" />
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Go!"
-        android:id="@+id/go"
-        android:layout_below="@+id/near_me"
-        android:layout_toRightOf="@+id/near_me"
-        android:layout_toEndOf="@+id/near_me"
-        android:onClick="go" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -49,93 +18,156 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Optimize your adventure!"
         android:id="@+id/header"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp" />
+        android:layout_marginTop="0dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
+    <!--VIEW FOR DRIVING TIME-->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Driving Time (hours)"
-        android:id="@+id/driving_time_header"
-        android:layout_below="@+id/difficulty"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:orientation="horizontal"
+        android:style="@style/mystyle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Driving Time (hours)"
+            android:id="@+id/driving_time_header" />
+
+        <!-- Slide bar number -->
+        <TextView
+            android:layout_width = "match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="0"
+            android:id="@+id/driving_time"
+            android:gravity="right"
+            android:layout_marginRight="25dp"/>
+
+    </LinearLayout>
 
     <SeekBar
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/driveTimeBar"
         android:max="24"
         android:progress="1"
-        android:indeterminate="false"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/driving_time_header"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:indeterminate="false" />
 
-    <TextView
-        android:layout_width="wrap_content"
+    <!-- VIEW FOR ESTIMATED LENGTH -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Estimated Length (hours)"
-        android:id="@+id/trailTime"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/driveTimeBar"
-        android:layout_alignParentLeft="true" />
+        android:orientation="horizontal"
+        android:style="@style/mystyle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Estimated Length (hours)"
+            android:id="@+id/trailTime"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="0"
+            android:id="@+id/hike_time"
+            android:gravity="right"
+            android:layout_marginRight="25dp"/>
+
+    </LinearLayout>
+
 
     <SeekBar
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/trailTimeBar"
         android:max="24"
         android:progress="1"
         android:indeterminate="false"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/trailTime"
-        android:layout_alignParentLeft="true"
-        android:layout_alignRight="@+id/driveTimeBar"
-        android:layout_alignEnd="@+id/driveTimeBar" />
+        />
 
-    <TextView
+    <!-- VIEW FOR DIFFICULTY-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:style="@style/mystyle">
+
+        <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Difficulty"
         android:id="@+id/textView6"
-        android:layout_below="@+id/other_locations"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="54dp" />
+        android:layout_alignParentStart="true" />
 
-    <Spinner
-        android:layout_width="wrap_content"
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/difficulty"
+            android:layout_below="@+id/textView6"
+            android:spinnerMode="dropdown"
+            android:entries="@array/difficulties" />
+
+    </LinearLayout>
+
+    <!-- BUTTON CONTROL-->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/difficulty"
-        android:layout_below="@+id/textView6"
-        android:spinnerMode="dropdown"
-        android:entries="@array/difficulties"/>
+        android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:id="@+id/hike_time"
-        android:layout_above="@+id/trailTimeBar"
-        android:layout_alignRight="@+id/header"
-        android:layout_alignEnd="@+id/header" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Find Trails Near Me"
+            android:id="@+id/near_me"
+            style="?android:attr/borderlessButtonStyle"
+            android:gravity="center" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:id="@+id/driving_time"
-        android:layout_above="@+id/driveTimeBar"
-        android:layout_toRightOf="@+id/go"
-        android:layout_below="@+id/difficulty"
-        android:layout_toLeftOf="@+id/hike_time"
-        android:layout_toStartOf="@+id/hike_time" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-</RelativeLayout>
+            <!-- SPINNER DISPLAYED INLINE WITH LOCATON-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Location"
+                    android:id="@+id/location"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <Spinner
+                    android:id="@+id/other_locations"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown"
+                    android:entries="@array/other_locations"
+                    android:gravity="center" />
+            </LinearLayout>
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Find Trails by Area "
+                android:id="@+id/go"
+                android:onClick="go"
+                style="?android:attr/borderlessButtonStyle"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
