@@ -49,6 +49,8 @@ public class Find_trails extends Activity {
             }
         });
 
+
+
         hike_time.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             int progressChanged = 0;
 
