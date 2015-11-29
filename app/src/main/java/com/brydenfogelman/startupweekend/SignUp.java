@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -52,7 +53,12 @@ public class SignUp extends Activity {
         // response type
         // Email already in use
         // username already in use
-
+        Toast.makeText(getApplicationContext(), create_account_success,
+                Toast.LENGTH_LONG).show();
+        if(create_account_success.contains("Added")){
+            Intent intent = new Intent(this, FindTrails.class);
+            startActivity(intent);
+        }
 
         // Returns to the SignUp
         // TODO: let user know that they fucked up, work on that implementation
