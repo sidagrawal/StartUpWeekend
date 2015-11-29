@@ -6,10 +6,15 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 
 public class Trail_List extends ActionBarActivity {
@@ -22,11 +27,10 @@ public class Trail_List extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trail__list);
-        region = getIntent().getExtras().getString("region");
-        difficulty = getIntent().getExtras().getString("difficulty");
-        hike_time = getIntent().getExtras().getString("hike_time");
-        drive_time = getIntent().getExtras().getString("drive_time");
-        Log.d("hello", "Hello");
+        region = getIntent().getBundleExtra("bundle").getString("region");
+        difficulty = getIntent().getBundleExtra("bundle").getString("difficulty");
+        hike_time = getIntent().getBundleExtra("bundle").getString("hike_time");
+        drive_time = getIntent().getBundleExtra("bundle").getString("drive_time");
         String trails = "";
         try {
             trails = new phpGetTrails(this).execute(region, difficulty, hike_time, drive_time).get();
@@ -35,7 +39,36 @@ public class Trail_List extends ActionBarActivity {
         } catch (ExecutionException e) {
             e.printStackTrace();
         }
-        Log.d("Hello", "Hello");
+
+        ArrayList<String> listOfRegion = new ArrayList();
+        ArrayList<String> listOfDifficulty = new ArrayList();
+        ArrayList<String> listOfHikeTime = new ArrayList();
+        ArrayList<String> listOfDriveTime = new ArrayList();
+        ArrayList<String> listOfName = new ArrayList();
+
+        JSONObject object=null;
+
+        try {
+            object = new JSONObject(trails);
+            JSONArray trailsArray = object.getJSONArray("trails");
+            for (int i=0; i<trailsArray.length(); i++) {
+                JSONObject trailObject = trailsArray.getJSONObject(i);
+                String region = trailObject.getString("region");
+                listOfRegion.add(region);
+                String difficulty = trailObject.getString("diff");
+                listOfDifficulty.add(difficulty);
+                String hikeTime = trailObject.getString("time");
+                listOfHikeTime.add(hikeTime);
+                String name = trailObject.getString("name");
+                listOfName.add(name);
+            }
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        Log.d("hello", listOfRegion.toString());
+
 
     }
 }
@@ -47,10 +80,14 @@ class phpGetTrails extends AsyncTask<String, Void, String> {
         this.context = context;
     }
 
+    private String makeNetworkFriendly(String str){
+        return str.replace(" ", "%20");
+    }
+
     @Override
     protected String doInBackground(String... params) {
         try {
-            String region = params[0].trim();
+            String region = params[0].trim().replace(" ", "%20");
             String difficulty = params[1].trim();
             String hike_time = params[2].trim();
             String drive_time = params[3].trim();
