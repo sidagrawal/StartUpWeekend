@@ -53,9 +53,9 @@ public class CustomAdapter extends BaseAdapter{
         // TODO Auto-generated method stub
         Holder holder=new Holder();
         View rowView;
-        rowView = inflater.inflate(R.layout.mylist, null);
-        holder.tv=(TextView) rowView.findViewById(R.id.Itemname);
-        holder.img=(ImageView) rowView.findViewById(R.id.icon);
+        rowView = inflater.inflate(R.layout.friend_item_view, null);
+        holder.tv=(TextView) rowView.findViewById(R.id.screenNameView);
+        holder.img=(ImageView) rowView.findViewById(R.id.avatarView);
         holder.tv.setText(result.get(position));
         holder.img.setImageResource(imageId[position]);
         return rowView;
