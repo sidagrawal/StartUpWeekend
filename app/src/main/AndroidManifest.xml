@@ -25,7 +25,7 @@
             android:label="@string/title_activity_login"
             android:theme="@style/NoActionBar"/>
         <activity
-            android:name=".Find_trails"
+            android:name=".FindTrails"
             android:label="@string/title_activity_find_trails"
             android:theme="@style/Theme.AppCompat.Light"/>
         <activity
@@ -33,22 +33,21 @@
             android:label="@string/title_activity_sign_up"
             android:theme="@style/NoActionBar"/>
         <activity
-            android:name=".ResultList"
-            android:label="@string/title_activity_result_list" />
-        <activity
-            android:name=".Trail_List"
+            android:name=".TrailList"
             android:label="@string/title_activity_trail__list"
             android:theme="@style/Theme.AppCompat.Light"/>
         <activity
             android:name=".Profile"
-            android:label="@string/title_activity_profile" />
+            android:label="@string/title_activity_profile"
+            android:theme="@style/Theme.AppCompat.Light"/>
         <activity
             android:name=".ListFriends"
             android:label="@string/title_activity_list_friends"
             android:theme="@style/Theme.AppCompat.Light"/>
         <activity
-            android:name=".Trail_detail"
-            android:label="@string/title_activity_trail_detail"></activity>
+            android:name=".TrailDetail"
+            android:label="@string/title_activity_trail_detail"
+            android:theme="@style/Theme.AppCompat.Light"></activity>
     </application>
 
 </manifest>

@@ -7,11 +7,11 @@
         android:orderInCategory="100"
         app:showAsAction="never" />
     <item android:id="@+id/action_profile"
-        android:title="@string/action_settings"
+        android:title="@string/action_profile"
         android:orderInCategory="1"
         app:showAsAction="never" />
     <item android:id="@+id/action_friends"
-        android:title="@string/action_settings"
+        android:title="@string/action_profile"
         android:orderInCategory="10"
         app:showAsAction="never" />
 </menu>

@@ -3,12 +3,15 @@ package com.brydenfogelman.startupweekend;
 import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 
 import org.json.JSONArray;
@@ -22,7 +25,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 
-public class Trail_List extends Activity {
+public class TrailList extends Activity {
     String region;
     String difficulty;
     String hike_time;
@@ -79,7 +82,7 @@ public class Trail_List extends Activity {
         }
         //int [] prgmImages={R.drawable.blank_profile_photo,R.drawable.blank_profile_photo,R.drawable.blank_profile_photo,R.drawable.blank_profile_photo};
         //this.setListAdapter(new ArrayAdapter<String>(this, R.layout.mylist, R.id.Itemname, listOfRegion));
-        //this.setListAdapter( new CustomAdapter(this, listOfRegion, prgmImages));
+        //this.setListAdapter( new FriendsAdapter(this, listOfRegion, prgmImages));
 
         // use a linear layout manager
         mLayoutManager = new LinearLayoutManager(this);
@@ -87,9 +90,31 @@ public class Trail_List extends Activity {
 
         TrailListCustomAdapter myAdapter = new TrailListCustomAdapter(listOfName, listOfDifficulty, listOfHikeTime, listOfDriveTime);
         mRecyclerView.setAdapter(myAdapter);
+    }
 
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
 
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
 
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        } else if(id == R.id.action_profile){
+            Intent intent = new Intent(this, Profile.class);
+            startActivity(intent);
+        } else if(id == R.id.action_friends){
+            Intent intent = new Intent(this, ListFriends.class);
+            startActivity(intent);
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
 

@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -41,7 +40,7 @@ public class Login extends Activity {
         }
 
         if (!login_success.contains("fail")) {
-            Intent intent = new Intent(this, Find_trails.class);
+            Intent intent = new Intent(this, FindTrails.class);
             startActivity(intent);
         }
     }

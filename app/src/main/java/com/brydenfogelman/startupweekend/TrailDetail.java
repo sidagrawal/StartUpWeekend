@@ -7,12 +7,12 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class Profile extends Activity {
+public class TrailDetail extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        setContentView(R.layout.activity_trail_detail);
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {

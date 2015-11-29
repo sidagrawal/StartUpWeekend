@@ -12,12 +12,12 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class CustomAdapter extends BaseAdapter{
+public class FriendsAdapter extends BaseAdapter{
     ArrayList<String> result;
     Context context;
     int [] imageId;
     private static LayoutInflater inflater=null;
-    public CustomAdapter(Context context, ArrayList<String> prgmNameList, int[] prgmImages) {
+    public FriendsAdapter(Context context, ArrayList<String> prgmNameList, int[] prgmImages) {
         // TODO Auto-generated constructor stub
         result=prgmNameList;
         this.context=context;

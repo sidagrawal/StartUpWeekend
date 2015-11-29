@@ -10,7 +10,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.view.MenuItem;
 
-public class Find_trails extends ActionBarActivity {
+public class FindTrails extends ActionBarActivity {
 
     SeekBar driving_time;
     SeekBar hike_time;
@@ -91,7 +91,7 @@ public class Find_trails extends ActionBarActivity {
     }
 
     public void go(View view){
-        Intent intent = new Intent(this, Trail_List.class);
+        Intent intent = new Intent(this, TrailList.class);
         Bundle bundle = new Bundle();
         bundle.putString("region", other_locations.getSelectedItem().toString());
         bundle.putString("difficulty", difficulty.getSelectedItem().toString());
