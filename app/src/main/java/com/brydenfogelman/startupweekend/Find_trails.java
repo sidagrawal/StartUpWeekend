@@ -69,6 +69,7 @@ public class Find_trails extends ActionBarActivity {
         bundle.putString("difficulty", difficulty.getSelectedItem().toString());
         bundle.putString("hike_time", hike_time_text.getText().toString());
         bundle.putString("drive_time", driving_time_text.getText().toString());
-        startActivity(intent, bundle);
+        intent.putExtra("bundle", bundle);
+        startActivity(intent);
     }
 }
