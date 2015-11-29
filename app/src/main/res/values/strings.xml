@@ -35,4 +35,5 @@
         <item>Medium</item>
         <item>Difficult</item>
     </string-array>
+    <string name="title_activity_trail__list">Trail_List</string>
 </resources>

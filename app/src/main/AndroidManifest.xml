@@ -30,7 +30,10 @@
             android:label="@string/title_activity_sign_up" />
         <activity
             android:name=".ResultList"
-            android:label="@string/title_activity_result_list"></activity>
+            android:label="@string/title_activity_result_list" />
+        <activity
+            android:name=".Trail_List"
+            android:label="@string/title_activity_trail__list"></activity>
     </application>
 
 </manifest>

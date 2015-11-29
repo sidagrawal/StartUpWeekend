@@ -40,7 +40,8 @@
         android:id="@+id/go"
         android:layout_below="@+id/near_me"
         android:layout_toRightOf="@+id/near_me"
-        android:layout_toEndOf="@+id/near_me" />
+        android:layout_toEndOf="@+id/near_me"
+        android:onClick="go" />
 
     <TextView
         android:layout_width="wrap_content"
