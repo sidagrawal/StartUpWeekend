@@ -1,10 +1,13 @@
 package com.brydenfogelman.startupweekend;
 
+import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.widget.ArrayAdapter;
 
@@ -19,16 +22,22 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 
-public class Trail_List extends ListActivity {
+public class Trail_List extends Activity {
     String region;
     String difficulty;
     String hike_time;
     String drive_time;
+    private RecyclerView mRecyclerView;
+    private RecyclerView.Adapter mAdapter;
+    private RecyclerView.LayoutManager mLayoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trail__list);
+        mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
+        mRecyclerView.setHasFixedSize(true);
+
         region = getIntent().getBundleExtra("bundle").getString("region");
         difficulty = getIntent().getBundleExtra("bundle").getString("difficulty");
         hike_time = getIntent().getBundleExtra("bundle").getString("hike_time");
@@ -62,15 +71,22 @@ public class Trail_List extends ListActivity {
                 String hikeTime = trailObject.getString("time");
                 listOfHikeTime.add(hikeTime);
                 String name = trailObject.getString("name");
-                listOfName.add(name);
+                listOfName.add(name + ", " + region);
             }
 
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        int [] prgmImages={R.drawable.blank_profile_photo,R.drawable.blank_profile_photo,R.drawable.blank_profile_photo,R.drawable.blank_profile_photo};
+        //int [] prgmImages={R.drawable.blank_profile_photo,R.drawable.blank_profile_photo,R.drawable.blank_profile_photo,R.drawable.blank_profile_photo};
         //this.setListAdapter(new ArrayAdapter<String>(this, R.layout.mylist, R.id.Itemname, listOfRegion));
-        this.setListAdapter( new CustomAdapter(this, listOfRegion, prgmImages));
+        //this.setListAdapter( new CustomAdapter(this, listOfRegion, prgmImages));
+
+        // use a linear layout manager
+        mLayoutManager = new LinearLayoutManager(this);
+        mRecyclerView.setLayoutManager(mLayoutManager);
+
+        TrailListCustomAdapter myAdapter = new TrailListCustomAdapter(listOfName, listOfDifficulty, listOfHikeTime, listOfDriveTime);
+        mRecyclerView.setAdapter(myAdapter);
 
 
 
