@@ -10,6 +10,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <!-- No action bar activities -->
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
@@ -25,12 +26,13 @@
             android:label="@string/title_activity_login"
             android:theme="@style/NoActionBar"/>
         <activity
-            android:name=".Find_trails"
-            android:label="@string/title_activity_find_trails" />
-        <activity
             android:name=".SignUp"
             android:label="@string/title_activity_sign_up"
             android:theme="@style/NoActionBar"/>
+        <!-- With Action Bar -->
+        <activity
+            android:name=".Find_trails"
+            android:label="@string/title_activity_find_trails" />
         <activity
             android:name=".ResultList"
             android:label="@string/title_activity_result_list" />
@@ -39,7 +41,7 @@
             android:label="@string/title_activity_trail__list" />
         <activity
             android:name=".friends"
-            android:label="@string/title_activity_friends" />
+            android:label="@string/title_activity_profile" />
         <activity
             android:name=".ListFriends"
             android:label="@string/title_activity_list_friends" />

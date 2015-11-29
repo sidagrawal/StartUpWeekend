@@ -33,9 +33,12 @@
         <item>Medium</item>
         <item>Difficult</item>
     </string-array>
-    <string name="title_activity_trail__list">Trail_List</string>
-    <string name="title_activity_friends">friends</string>
-    <string name="title_activity_list_friends">ListFriends</string>
+
+    <!-- ACTIVITY NAMES -->
+    <string name="title_activity_trail__list">Trails</string>
+    <string name="title_activity_profile">Profile</string>
+    <string name="title_activity_list_friends">Friend List</string>
+    <string name="title_activity_trail_detail">Trail Details</string>
 
     <!-- COLORS -->
     <color name="green">#27ae60</color>
@@ -52,5 +55,5 @@
     <color name="icons">#FFFFFF</color>
     <color name="divider">#B6B6B6</color>
 
-    <string name="title_activity_trail_detail">Trail_detail</string>
+
 </resources>
