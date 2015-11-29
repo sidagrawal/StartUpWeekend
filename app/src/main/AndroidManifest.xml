@@ -40,8 +40,8 @@
             android:label="@string/title_activity_trail__list"
             android:theme="@style/Theme.AppCompat.Light"/>
         <activity
-            android:name=".friends"
-            android:label="@string/title_activity_friends" />
+            android:name=".Profile"
+            android:label="@string/title_activity_profile" />
         <activity
             android:name=".ListFriends"
             android:label="@string/title_activity_list_friends"
