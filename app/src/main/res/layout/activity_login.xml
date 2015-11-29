@@ -37,7 +37,6 @@
         android:layout_below="@+id/password"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="34dp"
-
         style="?android:attr/borderlessButtonStyle"/>
 
     <TextView
