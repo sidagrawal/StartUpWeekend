@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Trail Name / Location"
+        android:text="The High Note"
         android:id="@+id/trail_name"
         android:gravity="center_horizontal"/>
 
@@ -75,7 +75,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/trail_description"
-        android:text="Here is where the description of the trail will go."
+        android:text="The High Note Trail offers the most scenic view of Cheakamus Lake in Garibaldi Provincial Park. The trail starts from the top of Whistler Mountain and wraps around the backside, offering dozens of incredible, mountaintop views before descending through the alpine area back to the Whistler Gondola.&quot; - VancouverTrails "
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_marginTop="15dp"/>
 

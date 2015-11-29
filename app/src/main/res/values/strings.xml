@@ -33,7 +33,7 @@
 
     <string-array name="difficulties">
         <item>Easy</item>
-        <item>Medium</item>
+        <item>Intermediate</item>
         <item>Difficult</item>
     </string-array>
 
