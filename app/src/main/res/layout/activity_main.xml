@@ -11,18 +11,6 @@
     android:background="@drawable/title2"
     tools:context="com.brydenfogelman.startupweekend.MainActivity">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sign Up"
-        android:id="@+id/button2"
-        android:onClick="onClickSignup"
-        android:layout_marginBottom="59dp"
-        style="?android:attr/borderlessButtonStyle"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/button3"
-        android:layout_alignStart="@+id/button3" />
-
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -34,7 +22,18 @@
         />
 
     <Button
-        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:id="@+id/button2"
+        android:onClick="onClickSignup"
+        android:layout_marginBottom="59dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/button3"
+        android:layout_alignStart="@+id/button3"
+        style="?android:attr/borderlessButtonStyle"/>
+
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Login"
@@ -42,7 +41,8 @@
         android:onClick="onClickLogin"
         android:layout_marginBottom="32dp"
         android:layout_above="@+id/button2"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        style="?android:attr/borderlessButtonStyle"/>
 
 
 </RelativeLayout>
