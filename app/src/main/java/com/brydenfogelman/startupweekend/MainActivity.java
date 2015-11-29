@@ -23,7 +23,7 @@ public class MainActivity extends Activity {
         return true;
     }
 
-    @Override
+   /* @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
@@ -36,7 +36,7 @@ public class MainActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
+    }*/
 
     public void onClickLogin(View view) {
         Intent intent = new Intent(this, Login.class);
