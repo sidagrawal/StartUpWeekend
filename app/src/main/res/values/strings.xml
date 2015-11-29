@@ -24,6 +24,12 @@
         <item>Choose to not Specify</item>
     </string-array>
 
+    <string name="title_activity_test_seek_bar">TestSeekBar</string>
+
+    <color name="green">#27ae60</color>
+    <color name="white">#ecf0f1</color>
+    <string name="title_activity_result_list">ResultList</string>
+
     <string-array name="difficulties">
         <item>Easy</item>
         <item>Medium</item>

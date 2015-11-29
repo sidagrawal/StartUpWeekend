@@ -28,6 +28,9 @@
         <activity
             android:name=".SignUp"
             android:label="@string/title_activity_sign_up" />
+        <activity
+            android:name=".ResultList"
+            android:label="@string/title_activity_result_list"></activity>
     </application>
 
 </manifest>
