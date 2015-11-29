@@ -1,6 +1,7 @@
 package com.brydenfogelman.startupweekend;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,20 +24,32 @@ public class TrailListCustomAdapter extends RecyclerView.Adapter<TrailListCustom
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
     // you provide access to all the views for a data item in a view holder
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         // each data item is just a string in this case
         public TextView trail_name_and_region_view;
         public TextView difficulty_view;
         public TextView driving_time_view;
         public TextView hike_time_view;
+        private final Context context;
+
         public ViewHolder(View view) {
             super(view);
             trail_name_and_region_view = (TextView)view.findViewById(R.id.textView);
             difficulty_view = (TextView)view.findViewById(R.id.difficulty);
             driving_time_view = (TextView)view.findViewById(R.id.driving_time);
             hike_time_view = (TextView)view.findViewById(R.id.trip_time);
+            context = view.getContext();
+            view.setClickable(true);
+            view.setOnClickListener(this);
+        }
+
+        public void onClick(View v){
+            Intent intent = new Intent(context, TrailDetail.class);
+            context.startActivity(intent);
         }
     }
+
+
 
     // Provide a suitable constructor (depends on the kind of dataset)
     public TrailListCustomAdapter(ArrayList<String> name_region, ArrayList<String> difficulty,
@@ -69,7 +82,6 @@ public class TrailListCustomAdapter extends RecyclerView.Adapter<TrailListCustom
         holder.difficulty_view.setText(diffculty.get(position));
         holder.hike_time_view.setText(hike_time.get(position));
         holder.driving_time_view.setText("0");
-
     }
 
     // Return the size of your dataset (invoked by the layout manager)
