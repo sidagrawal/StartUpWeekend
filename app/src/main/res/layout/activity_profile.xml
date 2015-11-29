@@ -29,7 +29,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Screen Name"
+                android:text="Bryden Fogelman"
                 android:id="@+id/textView7"
                 style="@style/topBelowMargin"/>
 
@@ -37,7 +37,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Distance Hiked"
+                android:text="Distance Hiked:    136 Km"
                 android:id="@+id/textView8"
                 style="@style/topBelowMargin"/>
 
@@ -45,7 +45,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Trail Level"
+                android:text="Trail Level:             Noob Hiker"
                 android:id="@+id/textView9"
                 style="@style/topBelowMargin"/>
 
@@ -64,8 +64,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Recent Hikes"
+            android:text="Bio"
             android:id="@+id/textView10"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="I really (REALLY) love to hike! I also really like this app and 100% believe that it has changed my life. I would pay anything for this app and I can't live without! (I know this is a weird bio but I just love this app so much :D )"
+            android:id="@+id/textView12" />
 
     </LinearLayout>
 
@@ -77,14 +84,80 @@
         android:orientation="vertical"
         style="@style/topBelowMargin">
 
-        <TextView
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Top Three Trails "
+        android:id="@+id/textView11" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="1. Stawamus Chief"
+        android:id="@+id/textView18" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="2. Dog Mountain"
+        android:id="@+id/textView19" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="3. Garibaldi Lake"
+        android:id="@+id/textView20" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Trails made by Bryden"
+        android:layout_marginTop="5dp"
+        android:id="@+id/textView21" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="1. Squamish Boss"
+        android:id="@+id/textView22" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="2. Cat Hill"
+        android:id="@+id/textView23" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="3. Garden River"
+        android:id="@+id/textView24" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/topBelowMargin">
+
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Trails "
-            android:id="@+id/textView11" />
+            android:text="Send Friend Invite"
+            style="@style/ColoredButton"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_centerInParent="true"/>
 
-    </LinearLayout>
+    </RelativeLayout>
 
 
 </LinearLayout>
