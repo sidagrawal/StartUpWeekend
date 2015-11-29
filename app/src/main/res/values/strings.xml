@@ -23,4 +23,10 @@
         <item>Female</item>
         <item>Choose to not Specify</item>
     </string-array>
+
+    <string-array name="difficulties">
+        <item>Easy</item>
+        <item>Medium</item>
+        <item>Difficult</item>
+    </string-array>
 </resources>
