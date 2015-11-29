@@ -46,6 +46,7 @@
     <color name="green">#27ae60</color>
     <color name="white">#ecf0f1</color>
     <color name="blue">#2980b9</color>
+    <color name="red">#F44336</color>
 
     <!-- Material Theme -->
     <color name="primary">#4CAF50</color>
@@ -56,6 +57,8 @@
     <color name="secondary_text">#727272</color>
     <color name="icons">#FFFFFF</color>
     <color name="divider">#B6B6B6</color>
+    <string name="title_activity_trail_description">TrailDescription</string>
+    <string name="title_activity_refer_friend">ReferFriend</string>
 
 
 </resources>
