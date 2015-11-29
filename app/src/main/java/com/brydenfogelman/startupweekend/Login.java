@@ -1,5 +1,6 @@
 package com.brydenfogelman.startupweekend;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -15,7 +16,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.concurrent.ExecutionException;
 
-public class Login extends ActionBarActivity {
+public class Login extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

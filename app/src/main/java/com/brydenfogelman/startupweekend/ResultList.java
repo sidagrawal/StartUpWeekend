@@ -1,9 +1,10 @@
 package com.brydenfogelman.startupweekend;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 
-public class ResultList extends ActionBarActivity {
+public class ResultList extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

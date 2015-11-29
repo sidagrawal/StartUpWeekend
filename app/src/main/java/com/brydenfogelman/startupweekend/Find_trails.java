@@ -11,8 +11,9 @@ import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
-public class Find_trails extends ActionBarActivity {
+public class Find_trails extends Activity {
 
     SeekBar driving_time;
     SeekBar hike_time;
@@ -25,6 +26,7 @@ public class Find_trails extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_find_trails);
+
         driving_time = (SeekBar)findViewById(R.id.driveTimeBar);
         hike_time = (SeekBar)findViewById(R.id.trailTimeBar);
         driving_time_text = (TextView)findViewById(R.id.driving_time);
