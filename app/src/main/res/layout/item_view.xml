@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            style="@style/mystyle">
+            style="@style/topBelowMargin">
 
             <!-- DIFFICULTY-->
             <LinearLayout
@@ -80,7 +80,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/mystyle">
+            style="@style/topBelowMargin">
 
             <TextView
                 android:layout_width="wrap_content"
