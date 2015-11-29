@@ -132,7 +132,9 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:id="@+id/driving_time"
         android:layout_above="@+id/driveTimeBar"
-        android:layout_alignRight="@+id/go"
-        android:layout_alignEnd="@+id/go" />
+        android:layout_toRightOf="@+id/go"
+        android:layout_below="@+id/difficulty"
+        android:layout_toLeftOf="@+id/hike_time"
+        android:layout_toStartOf="@+id/hike_time" />
 
 </RelativeLayout>
