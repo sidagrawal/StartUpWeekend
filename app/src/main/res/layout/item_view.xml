@@ -3,103 +3,109 @@
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:background="@color/blue"
     android:orientation="vertical">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Trail Name, Region :)"
-        android:id="@+id/textView"
-        android:layout_marginTop="15dp"
-        android:gravity="center"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp">
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        card_view:cardCornerRadius="4dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Trail Name, Region :)"
+            android:id="@+id/textView"
+            android:layout_marginTop="15dp"
+            android:gravity="center"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            style="@style/mystyle">
+            android:orientation="vertical"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp">
 
-            <!-- DIFFICULTY-->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Difficulty"
-                    android:id="@+id/textView3" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Easy"
-                    android:id="@+id/difficulty"
-                    android:gravity="center_vertical|right"
-                    android:layout_marginRight="25dp"
-                    android:layout_marginLeft="25dp"
-                    />
-
-            </LinearLayout>
-
-            <!-- DRIVING TIME -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                style="@style/mystyle">
+
+                <!-- DIFFICULTY-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Difficulty"
+                        android:id="@+id/textView3" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Easy"
+                        android:id="@+id/difficulty"
+                        android:gravity="center_vertical|right"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginLeft="25dp"
+                        />
+
+                </LinearLayout>
+
+                <!-- DRIVING TIME -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Driving Time (hrs)"
+                        android:id="@+id/textView2" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:id="@+id/driving_time"
+                        android:gravity="center_vertical|right"
+                        android:layout_marginRight="25dp"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/mystyle">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Driving Time (hrs)"
-                    android:id="@+id/textView2" />
+                    android:text="Estimated Trip Length"
+                    android:id="@+id/textView4"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="0"
-                    android:id="@+id/driving_time"
-                    android:gravity="center_vertical|right"
+                    android:id="@+id/trip_time"
+                    android:gravity="center"
                     android:layout_marginRight="25dp"
                     />
 
             </LinearLayout>
 
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/mystyle">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Estimated Trip Length"
-                android:id="@+id/textView4"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="0"
-                android:id="@+id/trip_time"
-                android:gravity="center"
-                android:layout_marginRight="25dp"
-                />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
+    </android.support.v7.widget.CardView>
 </LinearLayout>
