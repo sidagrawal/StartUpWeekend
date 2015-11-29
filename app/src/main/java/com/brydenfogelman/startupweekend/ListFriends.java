@@ -1,10 +1,16 @@
 package com.brydenfogelman.startupweekend;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
 import android.app.ListActivity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import java.util.ArrayList;
 
@@ -48,4 +54,34 @@ public class ListFriends extends ListActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    public void refer(View view){
+        DialogFragment referDialog = new referDialogFragment();
+        referDialog.show(getFragmentManager(), "refer");
+    }
+
+    public class referDialogFragment extends DialogFragment {
+
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+            // Get the layout inflater
+            LayoutInflater inflater = getActivity().getLayoutInflater();
+            builder.setTitle("Enter Email");
+            // Inflate and set the layout for the dialog
+            // Pass null as the parent view because its going in the dialog layout
+            builder.setView(inflater.inflate(R.layout.refer_friend, null))
+                    // Add action buttons
+                    .setPositiveButton("Send", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int id) {
+                            // sign in the user ...
+                        }
+                    })
+                    .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            dialog.cancel();
+                        }
+                    });
+            return builder.create();
+        }
+    }
 }

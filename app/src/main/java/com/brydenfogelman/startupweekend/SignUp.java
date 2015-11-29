@@ -55,13 +55,12 @@ public class SignUp extends Activity {
         // username already in use
         Toast.makeText(getApplicationContext(), create_account_success,
                 Toast.LENGTH_LONG).show();
-        if(create_account_success.contains("Added")){
+        if(create_account_success.contains("added")){
             Intent intent = new Intent(this, FindTrails.class);
             startActivity(intent);
         }
 
         // Returns to the SignUp
-        // TODO: let user know that they fucked up, work on that implementation
 
     }
 
