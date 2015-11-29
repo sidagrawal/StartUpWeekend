@@ -12,7 +12,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Find_trails extends ActionBarActivity {
+public class Find_trails extends Activity {
 
     SeekBar driving_time;
     SeekBar hike_time;
