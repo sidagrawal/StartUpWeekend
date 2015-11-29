@@ -1,17 +1,7 @@
 <resources>
 
-    <!--&lt;!&ndash; Base application theme. &ndash;&gt;-->
-    <!--<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
-        <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
-        <!--&lt;!&ndash;<item name="@android:background/Theme.AppCompat.Light.DarkActionBar">#16a085</item>&ndash;&gt;-->
-    <!--</style>-->
-
-    <!-- inherit from the material theme -->
     <style name="AppTheme" parent="Theme.AppCompat.Light">
-        <!-- Main theme colors -->
-        <!--   your app branding color for the app bar -->
-        <!--<item name="colorPrimary">@color/primary</item>-->
-        <!--<item name="android:background">@color/primary</item>-->
+
         <item name="colorPrimary">@color/primary</item>
         <!--   darker variant for the status bar and contextual app bars -->
         <item name="colorPrimaryDark">@color/primary_dark</item>
@@ -32,22 +22,6 @@
         <item name = "android:windowNoTitle">true</item>
     </style>
 
-    <style name="AppTheme.Base" parent="Theme.AppCompat.NoActionBar">
-        <!-- colorPrimary is used, for instance, for the default ActionBar
-             (but not Toolbar) background.
-              We specify the same color for the toolbar background in
-              toolbar.xml.. -->
-        <item name="colorPrimary">@color/white</item>
-
-        <!-- colorPrimaryDark is used for the status bar (with the
-             battery, clock, etc). -->
-        <item name="colorPrimaryDark">@color/primary_dark</item>
-
-        <!-- colorAccent is used as the default value for
-             colorControlActivated which is used to tint widgets. -->
-        <item name="colorAccent">@color/accent</item>
-    </style>
-
     <style name="topBelowMargin">
         <item name="android:layout_marginTop">10dp</item>
     </style>
@@ -60,13 +34,3 @@
     </style>
 
 </resources>
-
-
-<!-- <color name="primary">#4CAF50</color>
-  <color name="primary_dark">#388E3C</color>
-  <color name="primary_light">#C8E6C9</color>
-  <color name="accent">#795548</color>
-  <color name="primary_text">#212121</color>
-  <color name="secondary_text">#727272</color>
-  <color name="icons">#FFFFFF</color>
-  <color name="divider">#B6B6B6</color>-->

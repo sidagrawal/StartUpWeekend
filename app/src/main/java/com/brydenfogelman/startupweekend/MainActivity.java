@@ -7,6 +7,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.View;
 import android.view.MenuItem;
+import android.widget.Toolbar;
 
 public class MainActivity extends Activity {
 
@@ -48,5 +49,4 @@ public class MainActivity extends Activity {
         Intent intent = new Intent(this, SignUp.class);
         startActivity(intent);
     }
-
 }

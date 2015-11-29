@@ -13,6 +13,7 @@ import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.view.MenuItem;
+import android.widget.Toolbar;
 
 public class FindTrails extends ActionBarActivity {
 
