@@ -44,7 +44,7 @@ public class TrailListCustomAdapter extends RecyclerView.Adapter<TrailListCustom
         }
 
         public void onClick(View v){
-            Intent intent = new Intent(context, TrailDetail.class);
+            Intent intent = new Intent(context, TrailDescription.class);
             context.startActivity(intent);
         }
     }
